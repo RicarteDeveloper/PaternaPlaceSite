@@ -1,6 +1,6 @@
 :root {
     /*     --primary: rgb(223, 74, 94); */
-    --primary: #FF474B;
+    --primary: #ff474b;
     --black: black;
     --white: white;
     --grey: #adb5bd;
@@ -31,7 +31,7 @@ h2,
 h3,
 h4,
 p {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 h1 {
     font-size: 3.8rem;
@@ -70,7 +70,37 @@ p {
     cursor: pointer;
 }
 /*** INICIO ***/
-/** Barra Navegacion **/
+
+/** Navegación **/
+.logo {
+    width: 45%;
+}
+@media (min-width: 768px) {
+    .logo {
+        width: 13%;
+    }
+}
+.icon-menu {
+    width: 10%;
+}
+@media (min-width: 768px) {
+    .icon-menu {
+        display: none;
+    }
+}
+.navegacion a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.barra a {
+    text-decoration: none;
+    color: var(--black);
+}
 .barra {
     background-color: var(--white);
     padding: 1rem 0;
@@ -78,52 +108,103 @@ p {
     -moz-box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
     box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
 }
-.logo {
-    width: 45%;
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
-@media (min-width: 768px) {
-    .logo {
-        width: 18%;
-    }
-}
-/* navegacion principal */
-.contenedor-barra {
+.contenido-barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.navegacion-principal {
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 4rem;
+        transition: font-weight 0.8s ease;
+    }
+    .navegacion a:last-of-type {
+        margin-right: 0;
+    }
+    .navegacion a:hover {
+        color: var(--primary);
+    }
+}
+
+/** Mobile Menu **/
+.mobile-menu i {
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .mobile-menu i {
+        display: none;
+    }
+}
+.navegacion:target {
+    display: block;
+}
+.navegacion {
     display: none;
 }
 @media (min-width: 768px) {
-    .navegacion-principal {
+    .navegacion {
         display: block;
     }
 }
-.navegacion-principal a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    color: var(--black);
-    font-size: 1.4rem;
-    text-decoration: none;
+/* Menu content mobile */
+.side-nav {
+    height: 0%;
+    width: 100%;
+    text-align: center;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: var(--white);
+    overflow: hidden;
+    transition: 0.3s;
+    padding-top: 6rem;
 }
-.navegacion-principal a:hover{
+.side-nav .item-menu {
+    padding: 0;
+    font-size: 1.8rem;
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 4rem;
+}
+.item-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.side-nav a:hover {
     color: var(--primary);
 }
-@media (min-width: 768px) {
-    .navegacion-principal a {
-        font-size: 1.6rem;
-        margin-right: 3rem;
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    margin-top: 2rem;
+    right: 1.4rem;
+    width: 3rem;
+    margin-left: 5rem;
+}
+@media screen and (max-height: 450px) {
+    .side-nav {
+        padding-top: 1.5rem;
     }
-    .navegacion-principal a:last-of-type {
-        margin-right: 0;
+    .side-nav a {
+        font-size: 3rem;
     }
 }
-.menu-mobile {
-    width: 10%;
-}
-@media (min-width: 768px) {
-    .menu-mobile {
-        display: none;
-    }
+
+/** Mapa **/
+.mapa {
+    background-color: green;
+    height: 100vh;
 }
