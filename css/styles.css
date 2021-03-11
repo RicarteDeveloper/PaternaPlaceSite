@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+*,
+*:before,
+*:after {
+    /** creador de google**/
+    box-sizing: inherit;
+}
+
+/*** GLOBALES ***/
+img {
+    max-width: 100%; /** todas las imagenes son responsive**/
+}
+.contenedor {
+    width: 95%; /** para tener margenes en version movil **/
+    max-width: 120rem; /** =1200px; **/
+    margin: 0 auto 0 auto;
+}
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+p {
+    font-size: 1.4rem;
+}
+
+/*** UTILS ***/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
