@@ -7,8 +7,11 @@
     <title>Paterna Place Site</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -18,9 +21,9 @@
     <div class="side-nav" id="miMenu">
         <div class="item-menu">
             <!--             <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a> -->
-        <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">
+            <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">
                 <img src="img/close.png">
-        </a>
+            </a>
         </div>
         <div class="item-menu">
             <a href="#">Inicio</a>
@@ -55,8 +58,175 @@
         </div> <!-- .barra-->
     </div> <!-- .navbar-->
 
+    <div class="contenido">
+        <div id="mapa" class="mapa"></div>
+        <div class="card-blanco">
+            <!--        <div class="close-card">
+                <i class="fas fa-times"></i>
+            </div> -->
+            <div class="close-bar">
+                <button class="close-bar-btn"></button>
+            </div>
 
-    <div id="mapa" class="mapa"></div>
+            <div class="contenido-card">
+                <div class="contenedor-info-p">
+                    <div class="imagen-comercio">
+                        <img src="img/comercio-1.jpg" alt="Imagen Comercio">
+                    </div>
+                    <div class="contenedor-texto">
+                        <h2 class="titulo-comercio">The Black Turtle</h2>
+                        <div class="texto-comercio d-flex icons-c">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Av. del Tir de Colom, 21,
+                                46980 Paterna, Valencia</p>
+                        </div>
+                        <div class="tlf-comercio d-flex icons-c">
+                            <i class="fas fa-phone"></i>
+                            <p>+34 624092627</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content horario d-flex icons-c">
+                    <i class="fas fa-info"></i>
+                    <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado. Tapas,
+                        Hamburguesas, bocadillos, etc.</p>
+                </div>
+                <div class="contenedor-info-s">
+                    <div class="content horario d-flex icons-c">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a 21:00h<br>Sábado:<br>09:00h a 14:00h</p>
+                    </div>
+
+                    <div class="content d-flex-b icons-c">
+                        <div class="fb d-flex">
+                            <i class="fab fa-facebook-f"></i>
+                            <p>the black turtle</p>
+                        </div>
+                        <div class="ig d-flex">
+                            <i class="fab fa-instagram"></i>
+                            <p>@theblackturtle</p>
+                        </div>
+                    </div>
+
+                    <div class="content d-flex-b icons-c">
+                        <div class="d-flex ">
+                            <i class="fas fa-motorcycle"></i>
+                            <p>Servicio a domicilio</p>
+                        </div>
+                        <div class="categoria">
+                            <div class="contenedor-categoria">
+                                <p>Hostelería</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POPUP-->
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="clerfix">
+                        <i class="fas fa-times close"></i>
+                    </div>
+                    <div class="scroll">
+                        <div class="centrar">
+                            <div class="contenido-card">
+                                <div class="contenedor-info-p border-b">
+                                    <div class="imagen-comercio">
+                                        <img src="img/comercio-1.jpg" alt="Imagen Comercio">
+                                    </div>
+                                    <div class="contenedor-texto ">
+                                        <h2 class="titulo-comercio">The Black Turtle</h2>
+                                        <div class="icons-titulo d-flex icons-c">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <p>Localicación:</p>
+                                        </div>
+                                        <div class="content-w">
+                                            <p>Av. del Tir de Colom, 21,
+                                                46980 Paterna, Valencia</p>
+                                        </div>
+                                        <div class="icons-titulo d-flex icons-c">
+                                            <i class="fas fa-phone"></i>
+                                            <p>Teléfono:</p>
+                                        </div>
+                                        <div class="content-w">
+                                            <p>+34 624092627</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border-b">
+                                    <div class="section-w icons-titulo d-flex icons-c">
+                                        <i class="fas fa-info"></i>
+                                        <p>Descripción:</p>
+                                    </div>
+                                    <div class="content-w ">
+                                        <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado.
+                                            Tapas,
+                                            Hamburguesas, bocadillos, etc.</p>
+                                    </div>
+                                </div>
+                                <div class="border-b">
+                                    <div class="section-w icons-titulo d-flex icons-c">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <p>Horario:</p>
+                                    </div>
+                                    <div class="content-w ">
+                                        <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a 21:00h<br>Sábado:<br>09:00h a
+                                            14:00h
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex border-b">
+                                    <div class="margin-r">
+                                        <div class="section-w icons-titulo d-flex icons-c">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <p>Facebook:</p>
+                                        </div>
+                                        <div class="content-w ">
+                                            <p>the black turtle</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="margin-r">
+                                        <div class="section-w icons-titulo d-flex icons-c">
+                                            <i class="fab fa-instagram"></i>
+                                            <p>Instagram:</p>
+                                        </div>
+                                        <div class="content-w ">
+                                            <p>@theblackturtle</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex section-w border-b">
+                                    <div class="margin-r">
+                                        <div class="section-w icons-titulo d-flex icons-c">
+                                            <i class="fas fa-motorcycle"></i>
+                                            <p>Servicio a domicilio</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="contenedor-categoria">
+                                            <p>Hostelería</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
 
 
 
@@ -66,10 +236,38 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>
+
+<!-- 
+
+<div class="contenido-card-w ">
+    <div class="contenido-card-w">
+        <div class="contenedor-info-p-w">
+            <div class="imagen-comercio-w">
+                <img src="img/comercio-1.jpg" alt="Imagen Comercio">
+            </div>
+            <div class="contenedor-texto-w">
+                <h2 class="titulo-comercio-w">The Black Turtle</h2>
+                <div class="content-w texto-comercio-w d-flex icons-c">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Av. del Tir de Colom, 21,
+                        46980 Paterna, Valencia</p>
+                </div>
+                <div class="tlf-comercio-w d-flex icons-c content-w ">
+                    <i class="fas fa-phone"></i>
+                    <p>+34 624092627</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div> -->
