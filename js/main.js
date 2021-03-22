@@ -1,3 +1,5 @@
+//VARIABLES
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -7,24 +9,28 @@ var btn = document.getElementById("mapa");
 // Get the <span> element that closes the modal
 var closeW = document.getElementsByClassName("close")[0];
 
+
+//JAVASCRIPT
 document.addEventListener('DOMContentLoaded', function () {
+
     var lat = '39.508229';
     var lng = '-0.442983';
     var zoom = 16;
 
+    //ICONOS MAPA
     //hacemos una variable para customizar y pasarle los datos de nuestro marker 
     var iconHosteleria = new L.Icon({
-        iconUrl: '../img/marker-hosteleria.png',
-        iconSize: [50, 50],
-        iconAnchor: [25, 50]
+        iconUrl: '../img/markers/hosteleria.png',
+        iconSize: [45, 45],
+        iconAnchor: [25, 45]
     });
 
     var iconModa = new L.Icon({
-        iconUrl: '../img/marker-moda.png',
-        iconSize: [50, 50],
-        iconAnchor: [25, 50]
+        iconUrl: '../img/markers/moda-complementos.png',
+        iconSize: [45, 45],
+        iconAnchor: [25, 45]
     });
-
+    //listado comercios
     var comercios = [
         { id: 1, lat: '39.508229', lng: '-0.442983', icon: iconHosteleria, visitas: 3 },
         { id: 2, lat: '39.507476', lng: '-0.445624', icon: iconHosteleria, visitas: 3 },
@@ -32,10 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     var map = L.map('mapa').setView([lat, lng], zoom);
+    /* 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map); */
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
     }).addTo(map);
+
+    /*     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map); */
+
 
     for (let i = 0; i < comercios.length; i++) {
         const comercio = comercios[i];
@@ -44,17 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //mostrando los markers en el mapa
-    /*     var marker1 = L.marker([lat, lng], { icon: iconHosteleria }).addTo(map);
-        var marker2 = L.marker([39.507476, -0.445624], { icon: iconHosteleria }).addTo(map);
-        var marker3 = L.marker([39.506127, -0.444249], { icon: iconModa }).addTo(map); */
-
-
-
-
-
 }); //DOM CONTENT LOADED 
 
+
+//FUNCIONES
 function openNav() {
     document.getElementById('miMenu').style.width = '100%';
     document.getElementById('miMenu').style.height = '100%';
@@ -71,39 +84,34 @@ function onClickMarker(comercio) {
     var altura = $(document).height();
     var anchura = $(document).width();
     console.log(altura);
-    if (anchura <=768) {
+    if (anchura <= 768) {
         $('.card-blanco').css({ 'bottom': '0' });
     } else {
         modal.style.display = "block";
     }
     // TODO --> Pintar información del comercio
-    
 }
-//mobile design
+
+
+
+
+
+//JQUERY
+
+
 $(function () {
 
-    //cuando damos click en el mapa, el card aparece
-    /*     $('.mapa').on('click', function () {
-            $('.card-blanco').css({ 'bottom': '0' });
-            return false;
-        }); */
-
+    //MOBILE DESIGN
     //cuando demos click en el card se escondera
     $('.close-bar').on('click', function () {
         $('.card-blanco').css({ 'bottom': '-1000px' });
         return false;
     });
 
-    //POPUP
-
 
 });
 
-// When the user clicks the button, open the modal 
-/* btn.onclick = function () {
-    modal.style.display = "block";
-} */
-
+//POPUP
 // When the user clicks on <span> (x), close the modal
 closeW.onclick = function () {
     modal.style.display = "none";
