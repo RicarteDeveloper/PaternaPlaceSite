@@ -60,182 +60,221 @@
 
     <div class="contenido">
         <div id="mapa" class="mapa"></div>
+        <!-- mobile design -->
         <div class="card-blanco">
-            <!--        <div class="close-card">
-                <i class="fas fa-times"></i>
-            </div> -->
             <div class="close-bar">
                 <button class="close-bar-btn"></button>
             </div>
-
-            <div class="contenido-card">
-                <div class="contenedor-info-p">
-                    <div class="imagen-comercio">
-                        <img src="img/comercio-1.jpg" alt="Imagen Comercio">
-                    </div>
-                    <div class="contenedor-texto">
-                        <h2 class="titulo-comercio">The Black Turtle</h2>
-                        <div class="texto-comercio d-flex icons-c">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Av. del Tir de Colom, 21,
-                                46980 Paterna, Valencia</p>
+            <div class="scroll-content">
+                <div class="contenido-card">
+                    <div class="c-info-1 caja">
+                        <div class="logo-comercio">
+                            <img src="img/comercio-1.jpg" alt="Imagen Comercio">
                         </div>
-                        <div class="tlf-comercio d-flex icons-c">
-                            <i class="fas fa-phone"></i>
-                            <p>+34 624092627</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="content horario d-flex icons-c">
-                    <i class="fas fa-info"></i>
-                    <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado. Tapas,
-                        Hamburguesas, bocadillos, etc.</p>
-                </div>
-                <div class="contenedor-info-s">
-                    <div class="content horario d-flex icons-c">
-                        <i class="far fa-calendar-alt"></i>
-                        <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a 21:00h<br>Sábado:<br>09:00h a 14:00h</p>
-                    </div>
-
-                    <div class="content d-flex-b icons-c">
-                        <div class="fb d-flex">
-                            <i class="fab fa-facebook-f"></i>
-                            <p>the black turtle</p>
-                        </div>
-                        <div class="ig d-flex">
-                            <i class="fab fa-instagram"></i>
-                            <p>@theblackturtle</p>
-                        </div>
-                    </div>
-
-                    <div class="content d-flex-b icons-c">
-                        <div class="d-flex ">
-                            <i class="fas fa-motorcycle"></i>
-                            <p>Servicio a domicilio</p>
-                        </div>
-                        <div class="categoria">
-                            <div class="contenedor-categoria">
-                                <button class="contenedor-categoria"><img src="img/icons_categoria/hosteleria.png">Hostelería</button>
+                        <div class="contenedor-texto">
+                            <h2 class="titulo-comercio">The Black Turtle</h2>
+                            <div>
+                                <div class="titulo-caja">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Localización:</p>
+                                </div>
+                                <div class="content-caja">
+                                    <p>Av. del Tir de Colom, 21,
+                                        46980 Paterna, Valencia</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- POPUP-->
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="clerfix">
-                        <i class="fas fa-times close"></i>
+                    <div class="c-info-2">
+                        <div class="caja">
+                            <div class="titulo-caja">
+                                <i class="fas fa-info"></i>
+                                <p>Descripción:</p>
+                            </div>
+                            <div class="content-caja">
+                                <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado. Tapas,
+                                    Hamburguesas, bocadillos, etc.</p>
+                            </div>
+                        </div>
+
+                        <div class="caja">
+                            <div class="titulo-caja">
+                                <i class="far fa-calendar-alt"></i>
+                                <p>Horario:</p>
+                            </div>
+                            <div class="content-caja">
+                                <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a 21:00h<br>Sábado:<br>09:00h a 14:00h
+                                </p>
+                            </div>
+                        </div>
+                        <div class="caja">
+                            <div class="titulo-caja">
+                                <i class="fas fa-phone"></i>
+                                <p>Contacto:</p>
+                            </div>
+                            <div class="content-caja">
+                                <p>+34 624092627 / 96 162 53 75</p>
+                            </div>
+                        </div>
+
+                        <div class="caja d-flex-b">
+                            <div class="caja-b mitad">
+                                <div class="titulo-caja">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <p>Facebook:</p>
+                                </div>
+                                <div class="content-caja">
+                                    <p>the black turtle</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="titulo-caja">
+                                    <i class="fab fa-instagram"></i>
+                                    <p>Instagram:</p>
+                                </div>
+                                <div class="content-caja">
+                                    <p>@theblackturtle</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="caja d-flex-b">
+                            <div class="caja-b mitad">
+                                <div class="titulo-caja">
+                                    <i class="fas fa-motorcycle"></i>
+                                    <p>Servicio a domicilio</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="contenedor-categoria">
+                                    <img src="img/icons_categoria/hosteleria.png">Hostelería
+                                </button>
+
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="scroll">
-                        <div class="centrar">
-                            <div class="contenido-card">
-                                <div class="contenedor-info-p border-b">
-                                    <div class="imagen-comercio">
-                                        <img src="img/comercio-1.jpg" alt="Imagen Comercio">
-                                    </div>
-                                    <div class="contenedor-texto ">
-                                        <h2 class="titulo-comercio">The Black Turtle</h2>
-                                        <div class="icons-titulo d-flex icons-c">
+                </div> <!-- .contenido-card -->
+            </div> <!-- .scroll-content -->
+        </div> <!-- .card-blanco -->
+
+        <!-- POPUP-->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content ">
+                <div class="clearfix">
+                    <i class="fas fa-times close"></i>
+                </div>
+                <div class="scroll-content-web">
+                    <div class="centrar">
+                        <div class="contenido-card ">
+                            <div class="c-info-1 caja">
+                                <div class="logo-comercio">
+                                    <img src="img/comercio-1.jpg" alt="Imagen Comercio">
+                                </div>
+                                <div class="contenedor-texto">
+                                    <h2 class="titulo-comercio">The Black Turtle</h2>
+                                    <div>
+                                        <div class="titulo-caja">
                                             <i class="fas fa-map-marker-alt"></i>
-                                            <p>Localicación:</p>
+                                            <p>Localización:</p>
                                         </div>
-                                        <div class="content-w">
+                                        <div class="content-caja">
                                             <p>Av. del Tir de Colom, 21,
                                                 46980 Paterna, Valencia</p>
                                         </div>
-                                        <div class="icons-titulo d-flex icons-c">
-                                            <i class="fas fa-phone"></i>
-                                            <p>Teléfono:</p>
-                                        </div>
-                                        <div class="content-w">
-                                            <p>+34 624092627</p>
-                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="c-info-2">
+                                <div class="caja">
+                                    <div class="titulo-caja">
+                                        <i class="fas fa-info"></i>
+                                        <p>Descripción:</p>
+                                    </div>
+                                    <div class="content-caja">
+                                        <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado.
+                                            Tapas,
+                                            Hamburguesas, bocadillos, etc.</p>
                                     </div>
                                 </div>
 
-                                <div class="border-b caja-contenedor">
-                                    <div class="caja-border">
-                                        <div class="section-w icons-titulo d-flex icons-c ">
-                                            <i class="fas fa-info"></i>
-                                            <p>Descripción:</p>
-                                        </div>
-                                        <div class="content-w ">
-                                            <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado.
-                                                Tapas,
-                                                Hamburguesas, bocadillos, etc.</p>
-                                        </div>
+                                <div class="caja">
+                                    <div class="titulo-caja">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <p>Horario:</p>
                                     </div>
-                                    <div class="caja">
-                                        <div class="section-w icons-titulo d-flex icons-c">
-                                            <i class="far fa-calendar-alt"></i>
-                                            <p>Horario:</p>
-                                        </div>
-                                        <div class="content-w ">
-                                            <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a
-                                                21:00h<br>Sábado:<br>09:00h a
-                                                14:00h
-                                            </p>
-                                        </div>
+                                    <div class="content-caja">
+                                        <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a 21:00h<br>Sábado:<br>09:00h a
+                                            14:00h
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="caja">
+                                    <div class="titulo-caja">
+                                        <i class="fas fa-phone"></i>
+                                        <p>Contacto:</p>
+                                    </div>
+                                    <div class="content-caja">
+                                        <p>+34 624092627 / 96 162 53 75</p>
                                     </div>
                                 </div>
 
-
-                                <div class="caja-contenedor border-b">
-                                    <div class="caja-border">
-                                        <div class="section-w icons-titulo d-flex icons-c">
+                                <div class="caja d-flex-b">
+                                    <div class="caja-b mitad">
+                                        <div class="titulo-caja">
                                             <i class="fab fa-facebook-f"></i>
                                             <p>Facebook:</p>
                                         </div>
-                                        <div class="content-w ">
+                                        <div class="content-caja">
                                             <p>the black turtle</p>
-                                            </p>
                                         </div>
                                     </div>
-                                    <div class="caja">
-                                        <div class="section-w icons-titulo d-flex icons-c">
+                                    <div>
+                                        <div class="titulo-caja">
                                             <i class="fab fa-instagram"></i>
                                             <p>Instagram:</p>
                                         </div>
-                                        <div class="content-w ">
+                                        <div class="content-caja">
                                             <p>@theblackturtle</p>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="caja-contenedor border-b">
-                                    <div class="caja-border">
-                                        <div class="section-w icons-titulo d-flex icons-c">
+                                <div class="caja d-flex-b">
+                                    <div class="caja-b mitad">
+                                        <div class="titulo-caja">
                                             <i class="fas fa-motorcycle"></i>
                                             <p>Servicio a domicilio</p>
                                         </div>
                                     </div>
-                                    <div class="caja">
-                                        <button class="contenedor-categoria"><img src="img/icons_categoria/hosteleria.png">Hostelería</button>
+                                    <div>
+                                        <button class="contenedor-categoria">
+                                            <img src="img/icons_categoria/hosteleria.png">Hostelería
+                                        </button>
+
                                     </div>
                                 </div>
+
                             </div>
+                        </div> <!-- .contenido-card -->
+                    </div> <!-- .centrar -->
+                </div> <!-- .scroll-content-web -->
+            </div> <!-- .modal-content -->
+        </div> <!-- .modal -->
+    </div>
 
 
-                        </div>
 
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-        <script src="js/datos.js"></script>
-        <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
