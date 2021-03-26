@@ -1,0 +1,94 @@
+<div class="filtar-categoria">
+            <button id="btnFilter" class="btn-filtros">
+                <i class="fas fa-sliders-h"></i>
+            </button>
+
+            <!-- The Modal -->
+            <div id="myModalFilter" class="modal-filter">
+
+                <!-- Modal content -->
+                <div class="modal-content-filter">
+                    <div class="clearfix">
+                        <i class="fas fa-times close-filter"></i>
+                    </div>
+                    <div class="scroll-content-web">
+                        <ul class="contenido-filter">
+                            <li class="categoria-f cat-hosteleria">
+                                <p><img src="img/icons_categoria/hosteleria.png">Hostelería</p>
+                            </li>
+                            <li class="categoria-f cat-panaderia">
+                                <p><img src="img/icons_categoria/panaderia.png">Panadería</p>
+                            </li>
+                            <li class="categoria-f cat-moda">
+                                <p><img src="img/icons_categoria/moda-complementos.png">Moda</p>
+                            </li>
+                            <li class="categoria-f cat-ferreteria">
+                                <p><img src="img/icons_categoria/ferreteria.png">Ferretería</p>
+                            </li>
+                            <li class="categoria-f cat-fruteria">
+                                <p><img src="img/icons_categoria/fruteria.png">Frutería</p>
+                            </li>
+                            <li class="categoria-f cat-pescaderia">
+                                <p><img src="img/icons_categoria/pescaderia.png">Pescadería</p>
+                            </li>
+                            <li class="categoria-f cat-perfumeria">
+                                <p><img src="img/icons_categoria/perfumeria-cosmeticos.png">Perfumería</p>
+                            </li>
+                            <li class="categoria-f cat-carniceria">
+                                <p><img src="img/icons_categoria/carniceria.png">Carnicería</p>
+                            </li>
+                            <li class="categoria-f cat-bebes">
+                                <p><img src="img/icons_categoria/bebes.png">Bebés</p>
+                            </li>
+                            <li class="categoria-f cat-alimentacion">
+                                <p><img src="img/icons_categoria/alimentacion.png">Alimentación</p>
+                            </li>
+                            <li class="categoria-f cat-mascotas">
+                                <p><img src="img/icons_categoria/mascotas.png">Mascotas</p>
+                            </li>
+                            <li class="categoria-f cat-moviles">
+                                <p><img src="img/icons_categoria/moviles.png">Móviles</p>
+                            </li>
+                            <li class="categoria-f cat-papeleria">
+                                <p><img src="img/icons_categoria/papeleria.png">Papelería</p>
+                            </li>
+                            <li class="categoria-f cat-inmobiliaria">
+                                <p><img src="img/icons_categoria/inmobiliaria.png">Inmobiliaria</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+/* FILTER LISTADO DE CATEGORIAS */
+.contenido-filter {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.categoria-f {
+    list-style: none;width: 15rem;
+    border-radius: 3rem;
+    text-align: center;
+    margin: 1.4rem auto;
+    padding: .5rem 2rem;
+
+}
+.categoria-f p img {
+    width: 2rem;
+    margin-right: .8rem;
+}
+.categoria-f p {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
+.contenido-filter {
+    padding: 0;
+    margin: 0;
+}
+
+
+

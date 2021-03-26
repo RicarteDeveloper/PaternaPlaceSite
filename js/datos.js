@@ -1,6 +1,4 @@
-console.log('correcto');
 
-traerJSON();
 
 function traerJSON() {
     const xhttp = new XMLHttpRequest();
@@ -13,10 +11,14 @@ function traerJSON() {
         if (this.readyState == 4 && this.status == 200) {
             //JSON.parse() --> para pasar el string a objeto
             console.log(JSON.parse(this.responseText));
+            return JSON.parse(this.responseText);
+        } else {
+            return null;
         }
     }
-};
+}
 
-
-
+function init() {
+    console.log('DataService importado!');
+}
 
