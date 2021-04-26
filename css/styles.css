@@ -19,7 +19,7 @@ html {
     box-sizing: inherit;
 }
 body {
-    overflow: hidden;
+    /*  overflow: hidden;  */
     line-height: 1.5;
 }
 /**** GLOBALES ****/
@@ -229,6 +229,7 @@ p {
 .mapa {
     height: 100vh;
     z-index: 0;
+    
 }
 
 /* filtrar categoria */
@@ -276,7 +277,7 @@ p {
 }
 
 .scroll-content {
-    height: 55vh;
+    height: 65vh;
     overflow-x: scroll;
 }
 .scroll-content-web {
@@ -291,13 +292,14 @@ p {
     height: 73vh;
     width: 100%;
     padding: 1rem;
-    border: none;  word-wrap: break-word;
+    border: none;
+    word-wrap: break-word;
 }
 @media (min-width: 700px) {
-.scroll-content-filter {
-    height: 75vh;
-    width: 95%;
-}
+    .scroll-content-filter {
+        height: 75vh;
+        width: 95%;
+    }
 }
 .close-bar-btn {
     background-color: var(--grey);
@@ -539,44 +541,6 @@ p {
 .texto-formulario span {
     color: var(--primary);
 }
-
-input:not([type="submit"]),
-textarea {
-    padding: 1rem;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #eeeeee;
-    font-family: "Montserrat", sans-serif;
-    margin: 2rem 0;
-    font-size: 1.4rem;
-    border: none;
-    border-radius: 0.8rem;
-}
-
-textarea {
-    height: 9rem;
-    resize: none;
-}
-
-input[type="submit"] {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    color: var(--white);
-    background-color: var(--primary);
-    font-family: "Montserrat", sans-serif;
-    padding: 0.8rem 2rem;
-    border-radius: 3rem;
-    border: none;
-    font-size: 1.4rem;
-    font-weight: 500;
-    -webkit-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
-    -moz-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
-    box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
-}
 input[type="submit"]:hover {
     cursor: pointer;
 }
@@ -618,10 +582,99 @@ textarea:focus {
         padding: 2rem 1.5rem;
         margin: 2rem 7rem;
     }
-    textarea {
-        height: 15rem;
-    }
 }
+
+.form-control {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+.form-control label {
+    /* display: inline-block; */
+    margin-bottom: 0.5rem;
+}
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 0.4rem;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    padding: 1rem;
+    width: 100%;
+}
+.success input {
+    border-color: #2ecc71;
+}
+.error input {
+    border-color: #e74c3c;
+}
+.form-control i {
+    position: absolute;
+    font-size: 1.3rem;
+    top:1.5rem;
+    right: 1rem;
+    visibility: hidden;
+}
+.success .fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+.error .fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.error small {
+visibility: visible;
+color: #e74c3c;
+font-size: 1.2rem;
+font-family: "Montserrat", sans-serif;
+}
+textarea {
+    height: 9rem;
+    resize: none;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.4rem;
+    display: block;
+    border-radius: 0.4rem;
+    border: 2px solid #f0f0f0;
+    font-family: "Montserrat", sans-serif;
+}
+.btn-submit {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--white);
+    background-color: var(--primary);
+    font-family: "Montserrat", sans-serif;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    -webkit-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
+    -moz-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
+    box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* colores categorias */
 .cat-hosteleria {
@@ -682,14 +735,14 @@ textarea:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: calc(50% - .8rem);
+    flex-basis: calc(50% - 0.8rem);
     width: 10rem;
     height: 10rem;
     border-radius: 1rem;
     text-align: center;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
 }
-.categoria-filter:hover{
+.categoria-filter:hover {
     cursor: pointer;
 }
 .categoria-filter p {
@@ -698,7 +751,7 @@ textarea:focus {
     font-size: 1.4rem;
     word-wrap: break-word;
 }
-.categoria-filter img{
+.categoria-filter img {
     width: 3rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
