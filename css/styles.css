@@ -11,13 +11,17 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
 }
+
 *,
 *:before,
 *:after {
     /** creador de google**/
     box-sizing: inherit;
 }
-
+body {
+    /*  overflow: hidden;  */
+    line-height: 1.5;
+}
 /**** GLOBALES ****/
 img {
     max-width: 100%; /** todas las imagenes son responsive**/
@@ -81,19 +85,6 @@ p {
     justify-content: space-between;
     align-items: center;
 }
-.icons-c i {
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin-right: 1.4rem;
-}
-.border-b {
-    border-bottom: 1px solid var(--grey);
-    margin: 1.5rem 0;
-    padding-bottom: 1rem;
-}
-.border-b:last-of-type {
-    border: none;
-}
 
 /*** INICIO ***/
 
@@ -130,6 +121,7 @@ p {
 .barra {
     background-color: var(--white);
     padding: 1rem 0;
+    z-index: 4;
     -webkit-box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
     -moz-box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
     box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
@@ -187,7 +179,7 @@ p {
     text-align: center;
     width: 0;
     position: fixed;
-    z-index: 3;
+    z-index: 6;
     top: 0;
     right: 0;
     background-color: var(--white);
@@ -232,29 +224,82 @@ p {
 /** Mapa **/
 .contenido {
     position: relative;
-    overflow: hidden; /** las imagenes se cortan ponemos 100% **/
+    overflow: hidden;
 }
 .mapa {
-    background-color: green;
     height: 100vh;
     z-index: 0;
+    
 }
+
+/* filtrar categoria */
+.btn-filtros {
+    position: absolute;
+    background-color: var(--white);
+    font-size: 2rem;
+    z-index: 4;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    top: 9rem;
+    right: 1rem;
+    border: none;
+    color: var(--primary);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0rem 0rem 2rem rgba(78, 78, 78, 0.267);
+    -moz-box-shadow: 0rem 0rem 2rem rgba(78, 78, 78, 0.267);
+    box-shadow: 0rem 0rem 2rem rgba(78, 78, 78, 0.267);
+}
+.btn-filtros:hover {
+    cursor: pointer;
+}
+/*Mobile design popup*/
+
 .card-blanco {
     background-color: white;
     z-index: 5;
-    padding: 2rem 2rem;
+    padding: 2rem;
     position: absolute;
     /*     bottom: 0; */
     bottom: -1000px;
     left: 0;
     margin: 0;
     width: 100%;
-    height: 65vh;
+    height: 70vh;
     border-radius: 2rem 2rem 0 0;
     -webkit-transition: all 0.5s ease-in-out;
     -webkit-box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
     -moz-box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
     box-shadow: 0px 0px 3rem rgba(165, 165, 165, 0.39);
+}
+
+.scroll-content {
+    height: 65vh;
+    overflow-x: scroll;
+}
+.scroll-content-web {
+    overflow: auto;
+    height: 70vh;
+    width: 100%;
+    padding: 2rem;
+    border: none;
+}
+.scroll-content-filter {
+    overflow: auto;
+    height: 73vh;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    word-wrap: break-word;
+}
+@media (min-width: 700px) {
+    .scroll-content-filter {
+        height: 75vh;
+        width: 95%;
+    }
 }
 .close-bar-btn {
     background-color: var(--grey);
@@ -269,18 +314,22 @@ p {
     justify-content: center;
     align-items: center;
 }
-.contenedor-info-p {
+.c-info-1 {
     display: flex;
-    /*     border-bottom: 1px solid var(--grey); */
-    padding-bottom: 1.5rem;
-    margin-top: 2.5rem;
+    align-items: center;
+    margin-top: 1.8rem;
 }
-.imagen-comercio {
+.icons-c i {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-right: 1.5rem;
+}
+.logo-comercio {
     flex-basis: 33%;
     margin-right: 1.5rem;
     line-height: 0;
 }
-.imagen-comercio img {
+.logo-comercio img {
     display: inline-block;
     border-radius: 2rem;
 }
@@ -293,72 +342,30 @@ p {
 .contenedor-texto p {
     margin: 0.6rem 0;
 }
-@media (min-width: 768px) {
-    .centrar {
-        max-width: 70rem;
-        margin: 0 auto;
-    }
-    .contenido-card {
-        padding: 2rem;
-        line-height: 1.5;
-    }
-    .contenedor-info-p {
-        display: flex;
-        padding-bottom: 1rem;
-    }
-    .imagen-comercio {
-        flex-basis: 40%;
-        margin-right: 1.5rem;
-        line-height: 0;
-    }
-    .imagen-comercio img {
-        display: inline-block;
-        border-radius: 2rem;
-    }
-    .contenedor-texto {
-        flex-basis: 60%;
-    }
-    .contenedor-texto h2 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-    .contenedor-texto p {
-        margin: 0.6rem 0;
-    }
-    .icons-titulo {
-        font-weight: 500;
-    }
-    .content-w {
-        padding-left: 2rem;
-    }
-    .content-w p {
-        margin: 0.6rem 0;
-    }
-    .section-w  {
-        margin: 2rem 0;
-    }
-    .margin-r {
-        margin-right: 10rem;
-    }
-}
-@media (min-width: 900px) {
-    .imagen-comercio {
-        flex-basis: 30%;
-        margin-right: 1.5rem;
-        line-height: 0;
-    }
-    .contenedor-texto {
-        flex-basis: 80%;
-    }
-}
-/*contenedor-info-s*/
-.content {
-    padding: 1.5rem 0;
+
+/*c-info-2*/
+.caja {
     border-bottom: 1px solid var(--grey);
-    line-height: 1.5;
+    padding: 1.5rem 0;
 }
-.content:last-of-type {
-    border-bottom: none;
+.caja:last-of-type {
+    border: none;
+}
+.titulo-caja {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.titulo-caja i {
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+.titulo-caja p {
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+.content-caja {
+    margin-left: 2.3rem;
 }
 .contenedor-categoria {
     background-color: var(--primary);
@@ -366,20 +373,57 @@ p {
     border-radius: 2rem;
     color: var(--white);
     font-weight: 500;
-}
-.scroll {
-    overflow: auto;
-    height: 80vh;
-    width: 95%;
+    font-family: "Montserrat", sans-serif;
     border: none;
+    font-size: 1.4rem;
+    line-height: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-/** WEB DESIGN **/
-/* Fondo modal (popup) */
+.contenedor-categoria img {
+    width: 2rem;
+    margin-right: 1rem;
+    display: inline-block;
+}
+.caja-b {
+    border-right: 1px solid var(--grey);
+}
+.mitad {
+    flex-basis: 50%;
+}
+/* web design popup*/
+@media (min-width: 700px) {
+    .c-info-1 {
+        margin-top: 0;
+    }
+    .logo-comercio {
+        flex-basis: 25%;
+        margin-right: 1.5rem;
+        line-height: 0;
+    }
+    .logo-comercio img {
+        display: inline-block;
+        border-radius: 2rem;
+    }
+    .contenedor-texto {
+        flex-basis: 75%;
+    }
+    .contenedor-texto h2 {
+        font-size: 2.6rem;
+    }
+}
+
+.centrar {
+    max-width: 55rem;
+    margin: 0 auto;
+}
+/* modal design */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 5; /* Sit on top */
-    padding-top: 6rem; /* Location of the box */
+    padding-top: 5rem; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
@@ -395,8 +439,8 @@ p {
     margin: 0 auto;
     padding: 2rem;
     border-radius: 2rem;
-    width: 80%;
-
+    width: 70%;
+    height: 80vh;
 }
 
 /* Boton Close modal */
@@ -409,7 +453,305 @@ p {
 }
 .close:hover,
 .close:focus {
-    color: #000;
+    color: var(--black);
     text-decoration: none;
     cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal-filter {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 5rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.514); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content-filter {
+    background-color: var(--white);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 90%;
+    height: 85vh;
+}
+@media (min-width: 700px) {
+    .modal-content-filter {
+        width: 50%;
+    }
+}
+/* The Close Button */
+.close-filter {
+    color: var(--grey-medium);
+    font-size: 2.8rem;
+    order: 1;
+    font-weight: bold;
+    float: right;
+}
+
+.close-filter:hover,
+.close-filter:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*** Paginas Internas **/
+/** banner frase **/
+
+.imagen-contacto {
+    background-image: url(../img/mapa-2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vh;
+    position: relative;
+    z-index: -1;
+}
+.imagen-contacto::after {
+    content: "";
+    background: linear-gradient(transparent 50%, white 90%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.texto-formulario {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+    padding: 1 2rem;
+}
+.texto-formulario h3 {
+    font-size: 2rem;
+}
+.texto-formulario h4 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.texto-formulario span {
+    color: var(--primary);
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+input:focus,
+input.form-control:focus,
+textarea:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.formulario-contacto {
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+    .contenedor-contacto {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .imagen-contacto {
+        height: 90vh;
+        flex: 45%;
+    }
+
+    .imagen-contacto::after {
+        background: linear-gradient(to right, transparent 20%, white 90%);
+    }
+
+    .texto-formulario {
+        margin-bottom: 6rem;
+    }
+    .texto-formulario h3 {
+        font-size: 2.3rem;
+    }
+    .formulario-contacto {
+        flex: 55%;
+        padding: 2rem 1.5rem;
+        margin: 2rem 7rem;
+    }
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+.form-control label {
+    /* display: inline-block; */
+    margin-bottom: 0.5rem;
+}
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 0.4rem;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    padding: 1rem;
+    width: 100%;
+}
+.success input {
+    border-color: #2ecc71;
+}
+.error input {
+    border-color: #e74c3c;
+}
+.form-control i {
+    position: absolute;
+    font-size: 1.3rem;
+    top:1.5rem;
+    right: 1rem;
+    visibility: hidden;
+}
+.success .fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+.error .fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.error small {
+visibility: visible;
+color: #e74c3c;
+font-size: 1.2rem;
+font-family: "Montserrat", sans-serif;
+}
+textarea {
+    height: 9rem;
+    resize: none;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.4rem;
+    display: block;
+    border-radius: 0.4rem;
+    border: 2px solid #f0f0f0;
+    font-family: "Montserrat", sans-serif;
+}
+.btn-submit {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--white);
+    background-color: var(--primary);
+    font-family: "Montserrat", sans-serif;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    -webkit-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
+    -moz-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
+    box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* colores categorias */
+.cat-hosteleria {
+    background-color: #6a81e5;
+}
+.cat-panaderia {
+    background-color: #f4c588;
+}
+.cat-moda {
+    background-color: #dd7776;
+}
+.cat-ferreteria {
+    background-color: #a4a4a4;
+}
+.cat-fruteria {
+    background-color: #97dc7e;
+}
+.cat-pescaderia {
+    background-color: #6dd5d6;
+}
+.cat-perfumeria {
+    background-color: #f085ba;
+}
+.cat-carniceria {
+    background-color: #e56b5d;
+}
+.cat-bebes {
+    background-color: #84caec;
+}
+.cat-alimentacion {
+    background-color: #9c72d8;
+}
+.cat-mascotas {
+    background-color: #ca976b;
+}
+.cat-moviles {
+    background-color: #61af6c;
+}
+.cat-papeleria {
+    background-color: #354283;
+}
+.cat-inmobiliaria {
+    background-color: #83354e;
+}
+
+/* filters categorias */
+.contenido-filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 400px;
+}
+.categoria-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(50% - 0.8rem);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.5rem auto;
+}
+.categoria-filter:hover {
+    cursor: pointer;
+}
+.categoria-filter p {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+}
+.categoria-filter img {
+    width: 3rem;
+    margin-bottom: 0.5rem;
 }

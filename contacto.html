@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paterna Place Site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- MENU CONTENT MOBILE  -->
+    <div class="side-nav" id="miMenu">
+        <div class="item-menu">
+            <!--             <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a> -->
+            <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">
+                <img src="img/close.png">
+            </a>
+        </div>
+        <div class="item-menu">
+            <a href="index.html">Inicio</a>
+        </div>
+        <div class="item-menu">
+            <a href="comercios.html">Comercios</a>
+        </div>
+        <div class="item-menu">
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </div> <!-- end menu content mobile  -->
+
+
+    <!-- BARRA DE NAVEGACION -->
+    <div class="navbar">
+        <div class="barra ">
+            <div class="contenedor contenido-barra">
+                <a class="logo pointer" href="/">
+                    <img src="img/logo.png" alt="logo Paterna Place">
+                </a>
+                <div class="icon-menu" onclick="openNav()">
+                    <a href="#navegacion">
+                        <img src="img/menu.png" alt="icon menu">
+                    </a>
+                </div>
+                <nav class="navegacion">
+                    <a href="index.html">Inicio</a>
+                    <a href="comercios.html">Comercios</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div> <!-- .contenido-barra-->
+        </div> <!-- .barra-->
+    </div> <!-- .navbar-->
+
+    <div class=" contenedor-contacto">
+        <div class="imagen-contacto">
+        </div>
+        <div class="formulario-contacto">
+            <div class="texto-formulario">
+                <h3>¿Quieres que tu comercio aparezca en <span>Paterna Place</span> ? <h3>
+                        <h4>contacta con nosotros</h4>
+            </div>
+            <form id="form" class="contacto contenedor">
+                <div class="form-control ">
+                    <!--    <label>Nombre y Apellido</label> -->
+                    <input type="text" id="nombre" placeholder="Nombre y Apellido" name="nombre">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Mensaje Error</small>
+                </div>
+                <div class="form-control ">
+                    <!--        <label>Email</label> -->
+                    <input type="email" id="email" placeholder="Email" name="email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Mensaje Error</small>
+                </div>
+                <div class="form-control ">
+                    <!--            <label>Asunto</label> -->
+                    <input type="text" id="asunto" placeholder="Asunto" name="asunto">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Mensaje Error</small>
+                </div>
+                <div class="form-control">
+                    <!--              <label>Mensaje</label> -->
+                    <textarea id="mensaje" placeholder="Mensaje" name="mensaje"></textarea>
+
+                </div>
+                <button type="submit" value="Enviar" class="btn-submit" id="btnSubmit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- PaternaPlaceApp -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2646815443155353" data-ad-slot="6554544069"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+    <script src="js/contacto.js"></script>
+</body>
+
+</html>
