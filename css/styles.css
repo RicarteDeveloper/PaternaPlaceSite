@@ -376,15 +376,25 @@ p {
     font-family: "Montserrat", sans-serif;
     border: none;
     font-size: 1.4rem;
-    line-height: 0;
+    line-height: 1.5;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 1.5rem;
 }
+
 .contenedor-categoria img {
     width: 2rem;
     margin-right: 1rem;
     display: inline-block;
+}
+.contenido-social-media {
+    flex: 30%;
+}
+.contenido-categoria {
+    flex: 70%;
+    margin-right: 2rem;
+
 }
 .caja-b {
     border-right: 1px solid var(--grey);
@@ -392,6 +402,27 @@ p {
 .mitad {
     flex-basis: 50%;
 }
+/* iconos redes sociales card*/
+.icon-social {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+.fa-facebook {
+    color: #3b5998;
+}
+.fa-instagram {
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+
+}
+
 /* web design popup*/
 @media (min-width: 700px) {
     .c-info-1 {
@@ -663,16 +694,6 @@ textarea {
     -moz-box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
     box-shadow: 0rem 0rem 2rem rgba(226, 125, 125, 0.438);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
