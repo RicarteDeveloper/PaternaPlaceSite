@@ -91,11 +91,18 @@ p {
 /** Navegación **/
 .logo {
     width: 45%;
+    display: flex;
 }
 @media (min-width: 768px) {
     .logo {
         width: 13%;
     }
+}
+.logo span {
+    font-size: 1.4rem;
+    color: rgb(77, 77, 77);
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
 }
 .icon-menu {
     width: 10%;
