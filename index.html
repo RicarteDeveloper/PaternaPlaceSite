@@ -17,7 +17,13 @@
 </head>
 
 <body>
-    <!-- MENU CONTENT MOBILE  -->
+    <!-- loader -->
+    <div class="fondo-loading">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- Menu Movil  -->
     <div class="side-nav" id="miMenu">
         <div class="item-menu">
             <!--             <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a> -->
@@ -31,17 +37,21 @@
         <div class="item-menu">
             <a href="contacto.html">Contacto</a>
         </div>
-    </div> <!-- end menu content mobile  -->
+    </div>
 
 
     <!-- BARRA DE NAVEGACION -->
     <div class="navbar">
         <div class="barra fixed">
             <div class="contenedor contenido-barra">
-                <a class="logo pointer" href="/">
-                    <img src="img/logo.png" alt="logo Paterna Place">
-                </a>
-                <div class="icon-menu" >
+                <div class="logo">
+                    <a class=" pointer" href="/">
+                        <img src="img/logo.png" alt="logo Paterna Place">
+                    </a>
+                    <span>1.0.1</span>
+                </div>
+                
+                <div class="icon-menu">
                     <a href="#navegacion">
                         <img src="img/menu.png" alt="icon menu">
                     </a>
@@ -50,306 +60,115 @@
                     <a href="index.html">Inicio</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>
-            </div> <!-- .contenido-barra-->
-        </div> <!-- .barra-->
-    </div> <!-- .navbar-->
+            </div> 
+        </div> 
+    </div> 
 
-    <div class="contenido">
+    <!-- mapa -->
+    <div id="mapa" class="mapa"></div>
 
-        <div id="mapa" class="mapa"></div>
+    <!-- Boton Filtrar -->
+    <button id="btnFilter" class="btn-filtros">
+        <i class="fas fa-sliders-h"></i>
+    </button>
 
-        <!-- Boton Filtrar -->
-        <div class="filtar-categoria">
-            <button id="btnFilter" class="btn-filtros">
-                <i class="fas fa-sliders-h"></i>
-            </button>
-
-            <!-- The Modal filtros categorias-->
-            <div id="myModalFilter" class="modal-filter">
-                <!-- Modal content -->
-                <div class="modal-content-filter">
-                    <div class="clearfix">
-                        <i class="fas fa-times close-filter"></i>
-                    </div>
-                    <div class="scroll-content-filter">
-                        <ul class="contenido-filter">
-                            <li class="categoria-filter cat-hosteleria">
-                                <img src="img/icons_categoria/hosteleria.png">
-                                <p>Hostelería</p>
-                            </li>
-                            <li class="categoria-filter cat-panaderia">
-                                <img src="img/icons_categoria/panaderia.png">
-                                <p>Panadería</p>
-                            </li>
-                            <li class="categoria-filter cat cat-moda">
-                                <img src="img/icons_categoria/moda-complementos.png">
-                                <p>Moda</p>
-                            </li>
-                            <li class="categoria-filter cat-ferreteria">
-                                <img src="img/icons_categoria/ferreteria.png">
-                                <p>Ferretería</p>
-                            </li>
-                            <li class="categoria-filter cat-fruteria">
-                                <img src="img/icons_categoria/fruteria.png">
-                                <p>Frutería</p>
-                            </li>
-                            <li class="categoria-filter cat-pescaderia">
-                                <img src="img/icons_categoria/pescaderia.png">
-                                <p>Pescadería</p>
-                            </li>
-                            <li class="categoria-filter cat-perfumeria">
-                                <img src="img/icons_categoria/perfumeria-cosmeticos.png">
-                                <p>Perfumería</p>
-                            </li>
-                            <li class="categoria-filter cat-carniceria">
-                                <img src="img/icons_categoria/carniceria.png">
-                                <p>Carnicería</p>
-                            </li>
-                            <li class="categoria-filter cat-bebes">
-                                <img src="img/icons_categoria/bebes.png">
-                                <p>Bebés</p>
-                            </li>
-                            <li class="categoria-filter cat-alimentacion">
-                                <img src="img/icons_categoria/alimentacion.png">
-                                <p>Alimentación</p>
-                            </li>
-                            <li class="categoria-filter cat-mascotas">
-                                <img src="img/icons_categoria/mascotas.png">
-                                <p>Mascotas</p>
-                            </li>
-                            <li class="categoria-filter cat-moviles">
-                                <img src="img/icons_categoria/moviles.png">
-                                <p>Móviles</p>
-                            </li>
-                            <li class="categoria-filter cat-papeleria">
-                                <img src="img/icons_categoria/papeleria.png">
-                                <p>Papelería</p>
-                            </li>
-                            <li class="categoria-filter cat-inmobiliaria">
-                                <img src="img/icons_categoria/inmobiliaria.png">
-                                <p>Inmobiliaria</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- filtros categorias-->
+    <div id="myModalFilter" class="modal-filter">
+        <!-- Modal content -->
+        <div class="modal-content-filter">
+            <div class="clearfix">
+                <i class="fas fa-times close-filter"></i>
             </div>
+            <div class="scroll-content-filter">
+                <ul class="contenido-filter">
+                    <li class="categoria-filter cat-hosteleria">
+                        <img src="img/icons_categoria/hosteleria.png">
+                        <p>Hostelería</p>
+                    </li>
+                    <li class="categoria-filter cat-panaderia">
+                        <img src="img/icons_categoria/panaderia.png">
+                        <p>Panadería</p>
+                    </li>
+                    <li class="categoria-filter cat cat-moda">
+                        <img src="img/icons_categoria/moda-complementos.png">
+                        <p>Moda</p>
+                    </li>
+                    <li class="categoria-filter cat-ferreteria">
+                        <img src="img/icons_categoria/ferreteria.png">
+                        <p>Ferretería</p>
+                    </li>
+                    <li class="categoria-filter cat-fruteria">
+                        <img src="img/icons_categoria/fruteria.png">
+                        <p>Frutería</p>
+                    </li>
+                    <li class="categoria-filter cat-pescaderia">
+                        <img src="img/icons_categoria/pescaderia.png">
+                        <p>Pescadería</p>
+                    </li>
+                    <li class="categoria-filter cat-perfumeria">
+                        <img src="img/icons_categoria/perfumeria-cosmeticos.png">
+                        <p>Perfumería</p>
+                    </li>
+                    <li class="categoria-filter cat-carniceria">
+                        <img src="img/icons_categoria/carniceria.png">
+                        <p>Carnicería</p>
+                    </li>
+                    <li class="categoria-filter cat-bebes">
+                        <img src="img/icons_categoria/bebes.png">
+                        <p>Bebés</p>
+                    </li>
+                    <li class="categoria-filter cat-alimentacion">
+                        <img src="img/icons_categoria/alimentacion.png">
+                        <p>Alimentación</p>
+                    </li>
+                    <li class="categoria-filter cat-mascotas">
+                        <img src="img/icons_categoria/mascotas.png">
+                        <p>Mascotas</p>
+                    </li>
+                    <li class="categoria-filter cat-moviles">
+                        <img src="img/icons_categoria/moviles.png">
+                        <p>Móviles</p>
+                    </li>
+                    <li class="categoria-filter cat-papeleria">
+                        <img src="img/icons_categoria/papeleria.png">
+                        <p>Papelería</p>
+                    </li>
+                    <li class="categoria-filter cat-inmobiliaria">
+                        <img src="img/icons_categoria/inmobiliaria.png">
+                        <p>Inmobiliaria</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
-            <!-- card blanco  ---  mobile design -->
-            <div class="card-blanco">
-                <div class="close-bar">
-                    <button class="close-bar-btn"></button>
-                </div>
-                <div class="scroll-content">
-                    <div class="contenido-card">
-                        <div class="c-info-1 caja">
-                            <div class="logo-comercio">
-                                <img src="img/comercio-1.jpg" alt="Imagen Comercio">
-                            </div>
-                            <div class="contenedor-texto">
-                                <h2 class="titulo-comercio">The Black Turtle</h2>
-                                <div>
-                                    <div class="titulo-caja">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <p>Localización:</p>
-                                    </div>
-                                    <div class="content-caja">
-                                        <p>Av. del Tir de Colom, 21,
-                                            46980 Paterna, Valencia</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- card movil -->
+    <div class="card-blanco">
+        <div class="close-bar">
+            <button class="close-bar-btn"></button>
+        </div>
+        <div id="contenido" class="scroll-content"></div>
+    </div>
 
-                        <div class="c-info-2">
-<!--                             <div class="caja">
-                                <div class="titulo-caja">
-                                    <i class="fas fa-info"></i>
-                                    <p>Descripción:</p>
-                                </div>
-                                <div class="content-caja">
-                                    <p>Preparado todo al momento, disfrutar de un ambiente diferente y relajado.
-                                        Tapas,
-                                        Hamburguesas, bocadillos, etc.</p>
-                                </div>
-                            </div> -->
+    <!-- card web -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content ">
+            <div class="clearfix">
+                <i class="fas fa-times close-modal"></i>
+            </div>
+            <div class="scroll-content-web">
+                <div class="centrar" id="contenido-web"></div>
+            </div>
+        </div>
+    </div>
 
-                            <div class="caja">
-                                <div class="titulo-caja">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <p>Horario:</p>
-                                </div>
-                                <div class="content-caja">
-                                    <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a 21:00h<br>Sábado:<br>09:00h a
-                                        14:00h
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="caja">
-                                <div class="titulo-caja">
-                                    <i class="fas fa-phone"></i>
-                                    <p>Contacto:</p>
-                                </div>
-                                <div class="content-caja">
-                                    <p>+34 624092627</p>
-                                </div>
-                            </div>
 
-                            <div class="caja d-flex-b">
-                                <div class="caja-b mitad">
-                                    <div class="titulo-caja">
-                                        <i class="fab fa-facebook-f"></i>
-                                        <p>Facebook:</p>
-                                    </div>
-                                    <div class="content-caja">
-                                        <p>@theblacksturtle</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="titulo-caja">
-                                        <i class="fab fa-instagram"></i>
-                                        <p>Instagram:</p>
-                                    </div>
-                                    <div class="content-caja">
-                                        <p>@theblackturtle</p>
-                                    </div>
-                                </div>
-                            </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/datos.js"></script>
 
-                            <div class="caja d-flex-b">
-                                <div class="caja-b mitad">
-                                    <div class="titulo-caja">
-                                        <i class="fas fa-motorcycle"></i>
-                                        <p>Servicio a domicilio</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="contenedor-categoria">
-                                        <img src="img/icons_categoria/hosteleria.png">Hostelería
-                                    </button>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div> <!-- .contenido-card -->
-                </div> <!-- .scroll-content -->
-            </div> <!-- .card-blanco -->
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content ">
-                    <div class="clearfix">
-                        <i class="fas fa-times close"></i>
-                    </div>
-                    <div class="scroll-content-web">
-                        <div class="centrar">
-                            <div class="contenido-card ">
-                                <div class="c-info-1 caja">
-                                    <div class="logo-comercio">
-                                        <img src="img/comercio-1.jpg" alt="Imagen Comercio">
-                                    </div>
-                                    <div class="contenedor-texto">
-                                        <h2 class="titulo-comercio">The Black Turtle</h2>
-                                        <div>
-                                            <div class="titulo-caja">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <p>Localización:</p>
-                                            </div>
-                                            <div class="content-caja">
-                                                <p>Av. del Tir de Colom, 21,
-                                                    46980 Paterna, Valencia</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="c-info-2">
-                                    <!-- <div class="caja">
-                                        <div class="titulo-caja">
-                                            <i class="fas fa-info"></i>
-                                            <p>Descripción:</p>
-                                        </div>
-                                        <div class="content-caja">
-                                            <p>Preparado todo al momento, disfrutar de un ambiente diferente y
-                                                relajado.
-                                                Tapas,
-                                                Hamburguesas, bocadillos, etc.</p>
-                                        </div>
-                                    </div> -->
-
-                                    <div class="caja">
-                                        <div class="titulo-caja">
-                                            <i class="far fa-calendar-alt"></i>
-                                            <p>Horario:</p>
-                                        </div>
-                                        <div class="content-caja">
-                                            <p>Lunes a Viernes:<br>08:00h a 15:00h - 17:00h a
-                                                21:00h<br>Sábado:<br>09:00h a
-                                                14:00h
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="caja">
-                                        <div class="titulo-caja">
-                                            <i class="fas fa-phone"></i>
-                                            <p>Contacto:</p>
-                                        </div>
-                                        <div class="content-caja">
-                                            <p>+34 624092627 / 96 162 53 75</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="caja d-flex-b">
-                                        <div class="caja-b mitad">
-                                            <div class="titulo-caja">
-                                                <i class="fab fa-facebook-f"></i>
-                                                <p>Facebook:</p>
-                                            </div>
-                                            <div class="content-caja">
-                                                <p>the black turtle</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="titulo-caja">
-                                                <i class="fab fa-instagram"></i>
-                                                <p>Instagram:</p>
-                                            </div>
-                                            <div class="content-caja">
-                                                <p>@theblackturtle</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="caja d-flex-b">
-                                        <div class="caja-b mitad">
-                                            <div class="titulo-caja">
-                                                <i class="fas fa-motorcycle"></i>
-                                                <p>Servicio a domicilio</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button class="contenedor-categoria">
-                                                <img src="img/icons_categoria/hosteleria.png">Hostelería
-                                            </button>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div> <!-- .contenido-card -->
-                        </div> <!-- .centrar -->
-                    </div> <!-- .scroll-content-web -->
-                </div> <!-- .modal-content -->
-            </div> <!-- .modal -->
-
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-            <script src="js/main.js"></script>
-            <script src="js/datos.js"></script>
 </body>
 
 </html>
